@@ -1,0 +1,378 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{F30F2B8E-DF1C-4A29-BDE8-86A770F0E029}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>YurtOgrenciTakip</RootNamespace>
+    <AssemblyName>YurtOgrenciTakip</AssemblyName>
+    <TargetFrameworkVersion>v4.8.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AForge, Version=2.2.5.0, Culture=neutral, PublicKeyToken=c1db6ff4eaa06aeb, processorArchitecture=MSIL">
+      <HintPath>..\packages\AForge.2.2.5\lib\AForge.dll</HintPath>
+    </Reference>
+    <Reference Include="AForge.Video, Version=2.2.5.0, Culture=neutral, PublicKeyToken=cbfb6e07d173c401, processorArchitecture=MSIL">
+      <HintPath>..\packages\AForge.Video.2.2.5\lib\AForge.Video.dll</HintPath>
+    </Reference>
+    <Reference Include="AForge.Video.DirectShow, Version=2.2.5.0, Culture=neutral, PublicKeyToken=61ea4348d43881b7, processorArchitecture=MSIL">
+      <HintPath>..\packages\AForge.Video.DirectShow.2.2.5\lib\AForge.Video.DirectShow.dll</HintPath>
+    </Reference>
+    <Reference Include="MessagingToolkit.QRCode, Version=1.3.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\MessagingToolkit.QRCode.1.3.0\lib\MessagingToolkit.QRCode.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="zxing, Version=0.16.8.0, Culture=neutral, PublicKeyToken=4e88037ac681fe60, processorArchitecture=MSIL">
+      <HintPath>..\packages\ZXing.Net.0.16.8\lib\net48\zxing.dll</HintPath>
+    </Reference>
+    <Reference Include="zxing.presentation, Version=0.16.8.0, Culture=neutral, PublicKeyToken=4e88037ac681fe60, processorArchitecture=MSIL">
+      <HintPath>..\packages\ZXing.Net.0.16.8\lib\net48\zxing.presentation.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AdminPaneliDağılım.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminPaneliDağılım.Designer.cs">
+      <DependentUpon>AdminPaneliDağılım.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormKamera.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormKamera.Designer.cs">
+      <DependentUpon>FormKamera.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormGiderler.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormGiderler.Designer.cs">
+      <DependentUpon>FormGiderler.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormMailDoğrulama.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormMailDoğrulama.Designer.cs">
+      <DependentUpon>FormMailDoğrulama.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormQrKod.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormQrKod.Designer.cs">
+      <DependentUpon>FormQrKod.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmİlkEkran.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmİlkEkran.Designer.cs">
+      <DependentUpon>FrmİlkEkran.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmAdminİşlemleri.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmAdminİşlemleri.Designer.cs">
+      <DependentUpon>FrmAdminİşlemleri.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmAçılışSayfası.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmAçılışSayfası.Designer.cs">
+      <DependentUpon>FrmAçılışSayfası.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmBolumler.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmBolumler.Designer.cs">
+      <DependentUpon>FrmBolumler.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmGelirİstatistik.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmGelirİstatistik.Designer.cs">
+      <DependentUpon>FrmGelirİstatistik.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmGiderGüncelleme.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmGiderGüncelleme.Designer.cs">
+      <DependentUpon>FrmGiderGüncelleme.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmGiderlerListesi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmGiderlerListesi.Designer.cs">
+      <DependentUpon>FrmGiderlerListesi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmOdemeler.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmOdemeler.Designer.cs">
+      <DependentUpon>FrmOdemeler.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmOgrenciDüzenleme.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmOgrenciDüzenleme.Designer.cs">
+      <DependentUpon>FrmOgrenciDüzenleme.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmOgrenciListesi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmOgrenciListesi.Designer.cs">
+      <DependentUpon>FrmOgrenciListesi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmOgrKayıt.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmOgrKayıt.Designer.cs">
+      <DependentUpon>FrmOgrKayıt.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmPersonelDüzenleme.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmPersonelDüzenleme.Designer.cs">
+      <DependentUpon>FrmPersonelDüzenleme.cs</DependentUpon>
+    </Compile>
+    <Compile Include="..\..\..\..\OneDrive\Masaüstü\Program.cs">
+      <Link>Program.cs</Link>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SqlBaglantim.cs" />
+    <Compile Include="YurtOgrenciTakipDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>YurtOgrenciTakipDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="YurtOgrenciTakipDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>YurtOgrenciTakipDataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="YurtOgrenciTakipDataSet2.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>YurtOgrenciTakipDataSet2.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="YurtOgrenciTakipDataSet3.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>YurtOgrenciTakipDataSet3.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="YurtOgrenciTakipDataSet4.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>YurtOgrenciTakipDataSet4.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="YurtOgrenciTakipDataSet5.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>YurtOgrenciTakipDataSet5.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="YurtOgrenciTakipDataSet6.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>YurtOgrenciTakipDataSet6.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="YurtOgrenciTakipDataSet7.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>YurtOgrenciTakipDataSet7.xsd</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="AdminPaneliDağılım.resx">
+      <DependentUpon>AdminPaneliDağılım.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormGiderler.resx">
+      <DependentUpon>FormGiderler.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormKamera.resx">
+      <DependentUpon>FormKamera.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormMailDoğrulama.resx">
+      <DependentUpon>FormMailDoğrulama.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormQrKod.resx">
+      <DependentUpon>FormQrKod.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmİlkEkran.resx">
+      <DependentUpon>FrmİlkEkran.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmAdminİşlemleri.resx">
+      <DependentUpon>FrmAdminİşlemleri.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmAçılışSayfası.resx">
+      <DependentUpon>FrmAçılışSayfası.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmBolumler.resx">
+      <DependentUpon>FrmBolumler.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmGelirİstatistik.resx">
+      <DependentUpon>FrmGelirİstatistik.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmGiderGüncelleme.resx">
+      <DependentUpon>FrmGiderGüncelleme.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmGiderlerListesi.resx">
+      <DependentUpon>FrmGiderlerListesi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmOdemeler.resx">
+      <DependentUpon>FrmOdemeler.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmOgrenciDüzenleme.resx">
+      <DependentUpon>FrmOgrenciDüzenleme.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmOgrenciListesi.resx">
+      <DependentUpon>FrmOgrenciListesi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmOgrKayıt.resx">
+      <DependentUpon>FrmOgrKayıt.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmPersonelDüzenleme.resx">
+      <DependentUpon>FrmPersonelDüzenleme.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <None Include="YurtOgrenciTakipDataSet.xsc">
+      <DependentUpon>YurtOgrenciTakipDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="YurtOgrenciTakipDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>YurtOgrenciTakipDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="YurtOgrenciTakipDataSet.xss">
+      <DependentUpon>YurtOgrenciTakipDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="YurtOgrenciTakipDataSet1.xsc">
+      <DependentUpon>YurtOgrenciTakipDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="YurtOgrenciTakipDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>YurtOgrenciTakipDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="YurtOgrenciTakipDataSet1.xss">
+      <DependentUpon>YurtOgrenciTakipDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="YurtOgrenciTakipDataSet2.xsc">
+      <DependentUpon>YurtOgrenciTakipDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="YurtOgrenciTakipDataSet2.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>YurtOgrenciTakipDataSet2.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="YurtOgrenciTakipDataSet2.xss">
+      <DependentUpon>YurtOgrenciTakipDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="YurtOgrenciTakipDataSet3.xsc">
+      <DependentUpon>YurtOgrenciTakipDataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="YurtOgrenciTakipDataSet3.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>YurtOgrenciTakipDataSet3.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="YurtOgrenciTakipDataSet3.xss">
+      <DependentUpon>YurtOgrenciTakipDataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="YurtOgrenciTakipDataSet4.xsc">
+      <DependentUpon>YurtOgrenciTakipDataSet4.xsd</DependentUpon>
+    </None>
+    <None Include="YurtOgrenciTakipDataSet4.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>YurtOgrenciTakipDataSet4.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="YurtOgrenciTakipDataSet4.xss">
+      <DependentUpon>YurtOgrenciTakipDataSet4.xsd</DependentUpon>
+    </None>
+    <None Include="YurtOgrenciTakipDataSet5.xsc">
+      <DependentUpon>YurtOgrenciTakipDataSet5.xsd</DependentUpon>
+    </None>
+    <None Include="YurtOgrenciTakipDataSet5.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>YurtOgrenciTakipDataSet5.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="YurtOgrenciTakipDataSet5.xss">
+      <DependentUpon>YurtOgrenciTakipDataSet5.xsd</DependentUpon>
+    </None>
+    <None Include="YurtOgrenciTakipDataSet6.xsc">
+      <DependentUpon>YurtOgrenciTakipDataSet6.xsd</DependentUpon>
+    </None>
+    <None Include="YurtOgrenciTakipDataSet6.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>YurtOgrenciTakipDataSet6.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="YurtOgrenciTakipDataSet6.xss">
+      <DependentUpon>YurtOgrenciTakipDataSet6.xsd</DependentUpon>
+    </None>
+    <None Include="YurtOgrenciTakipDataSet7.xsc">
+      <DependentUpon>YurtOgrenciTakipDataSet7.xsd</DependentUpon>
+    </None>
+    <None Include="YurtOgrenciTakipDataSet7.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>YurtOgrenciTakipDataSet7.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="YurtOgrenciTakipDataSet7.xss">
+      <DependentUpon>YurtOgrenciTakipDataSet7.xsd</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

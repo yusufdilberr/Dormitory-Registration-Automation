@@ -1,0 +1,1 @@
+I developed a dormitory registration automation system using C#. The project includes features such as fee tracking, student management, room occupancy monitoring, and categorizing students based on their departments. It also incorporates tables for tracking expenses, revenues, and various other functionalities.
